@@ -80,12 +80,10 @@ class Handler(SimpleHTTPRequestHandler):
         super().do_GET()
 
     def do_PATCH(self) -> None:
-        parsed = urlparse(self.path)
-        if not parsed.path.startswith("/api/temples/"):
-            self.send_error_json(HTTPStatus.NOT_FOUND, "Not found")
-            return
-        temple_id = parsed.path.rsplit("/", 1)[-1]
-        self.handle_temple_update(temple_id)
+        self.send_error_json(
+            HTTPStatus.FORBIDDEN,
+            "Editing is disabled in the public v1 API.",
+        )
 
     def handle_temples(self, query: str) -> None:
         params = parse_qs(query)
