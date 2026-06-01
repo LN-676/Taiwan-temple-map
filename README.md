@@ -19,6 +19,10 @@ Opening hours, water, and meals are MVP-editable local fields.
 
 ### Static GitHub Pages version
 
+Public site:
+
+https://ln-676.github.io/Taiwan-temple-map/
+
 ```bash
 python3 scripts/fetch_temples.py
 python3 scripts/import_temples.py
@@ -37,7 +41,9 @@ python3 scripts/import_city_open_data_sources.py
 python3 app/server.py
 ```
 
-Open http://127.0.0.1:8000
+Local development URL:
+
+http://127.0.0.1:8000
 
 ## API
 
