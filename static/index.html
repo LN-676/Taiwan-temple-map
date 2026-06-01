@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>台灣公廟地圖 MVP</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <aside class="panel">
+      <header>
+        <p class="eyebrow">Taiwan Temple Map</p>
+        <h1>台灣公廟地圖</h1>
+        <p id="summary">載入資料中...</p>
+      </header>
+
+      <section class="filters">
+        <input id="query" type="search" placeholder="搜尋公廟、地址、神明" />
+        <select id="city">
+          <option value="">全部縣市</option>
+        </select>
+        <select id="deity">
+          <option value="">熱門主祀神祇</option>
+        </select>
+        <button id="search">查找</button>
+      </section>
+
+      <section class="list" id="temple-list"></section>
+    </aside>
+
+    <main id="map"></main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/app.js"></script>
+  </body>
+</html>
